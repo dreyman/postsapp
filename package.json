@@ -1,0 +1,12 @@
+{
+  "name": "postsapp",
+  "version": "1.0.0",
+  "description": "An application that shows posts and comments from jsonplaceholder.typicode.com",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "namyerd@gmail.com",
+  "license": "MIT",
+  "dependencies": {}
+}

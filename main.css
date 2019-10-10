@@ -1,0 +1,83 @@
+html, body {
+	height: 100%;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.posts-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  box-shadow: 0 0 5px gray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.post:hover {
+  box-shadow: 0px 0px 15px darkgray;
+}
+
+.post-footer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.comments-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.post h2, p {
+  margin: 0;
+}
+
+.page-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.comment-header {
+  font-size: 19px;
+}
+
+.comment-body {
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-radius: 50%;
+  border-top-color: green;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

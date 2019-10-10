@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="postsapp" lang="en">
+<head>
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width">
+
+  <title>Posts and comments</title>
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="main.css">
+  
+  <script defer src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <div class="container" ng-controller="mainController as vm">
+    <div class="page-controls mt-1" ng-show="!vm.loadingPosts">
+        <button type="button" ng-click="vm.page = vm.page - 1" ng-disabled="vm.page <= 1">
+          Previous page
+        </button>
+        <button type="button" ng-click="vm.page = vm.page + 1" ng-disabled="vm.posts.length < vm.postsPerPage">
+          Next page
+        </button>
+    </div>
+
+    <div class="spinner mx-auto mt-1" ng-show="vm.loadingPosts"></div>
+
+    <div class="mx-auto" ng-show="vm.posts.length === 0 && !vm.loadingPosts">
+      no posts here yet
+    </div>
+
+    <div class="posts-wrapper" ng-show="!vm.loadingPosts">
+      <div class="post" ng-repeat="post in vm.posts track by post.id">
+        <post post="post"></post>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<style>
+</style>
+</html>
